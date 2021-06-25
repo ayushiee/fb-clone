@@ -10,3 +10,10 @@ function App() {
 }
 
 export default App;
+
+
+// Header component
+// App body
+//   - side bar
+//   - feed
+//   - widgets
