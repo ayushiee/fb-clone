@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <h1>FB Clone </h1>
     </div>
   );
