@@ -1,0 +1,34 @@
+@import '../../utils/variables';
+
+.Header {
+  background-color: thistle;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  flex: auto;
+  justify-content: space-between;
+
+  .header-left {
+    //   background-color: tomato;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    .logo {
+      height: 40px;
+    }
+    .search-bar {
+        margin: 0 0.4rem;
+        display: flex;
+        background-color: $comment-background;
+        color: $comment-text;
+        padding: 0.4rem;
+        border-radius: 3rem;
+        width: 5rem;
+        justify-content: center;
+        overflow: hidden;
+        &:hover {
+            cursor: text;
+        }
+    }
+  }
+}
