@@ -1,34 +1,116 @@
 @import '../../utils/variables';
 
-.Header {
-  background-color: thistle;
-  padding: 0.5rem;
+.header {
+  background-color: $component-background;
+  padding: 0.2rem 0.5rem 0;
   display: flex;
   flex-direction: row;
   flex: auto;
   justify-content: space-between;
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  box-shadow: 0px 5px 8px -9px $box-shadow;
 
-  .header-left {
-    //   background-color: tomato;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
+  .headerLeft {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
     .logo {
       height: 40px;
     }
-    .search-bar {
-        margin: 0 0.4rem;
-        display: flex;
-        background-color: $comment-background;
+
+    .searchInput {
+      margin: 0 0.4rem;
+      display: flex;
+      background-color: $comment-background;
+      padding: 0.2rem;
+      border-radius: 3rem;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+      .searchIcon {
         color: $comment-text;
+        margin-left: 0.5rem;
+      }
+
+      .inputBar {
+        background-color: transparent;
+        border: none;
+        outline: none;
         padding: 0.4rem;
-        border-radius: 3rem;
-        width: 5rem;
-        justify-content: center;
-        overflow: hidden;
-        &:hover {
-            cursor: text;
+        color: $comment-text;
+      }
+    }
+  }
+
+  .headerCenter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 0.6;
+
+    .option {
+      display: flex;
+      align-items: center;
+      padding: 0.6rem 3rem;
+      border-radius: 0.4rem;
+      transition: linear 200ms;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $button-hover;
+        transform: translateY(-1.5px);
+        .icon {
+          color: $primary;
         }
+      }
+
+      .icon {
+        color: $icon;
+      }
+    }
+    .activeOption {
+      display: flex;
+      align-items: center;
+      padding: 0.6rem 3rem;
+      cursor: pointer;
+      border-bottom: 4px solid $primary;
+
+      .icon {
+        color: $primary;
+      }
+    }
+  }
+
+  .headerRight {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    button {
+      background-color: $button-background;
+      color: $button-icon;
+      margin: 0 0.3rem;
+      transition: linear 200ms;
+
+      &:hover {
+        background-color: $sec-button-hover;
+        transform: translateY(-2px);
+      }
+    }
+
+    .info {
+      display: flex;
+      align-items: center;
+      margin-right: 0.5rem;
+
+      h4 {
+        margin-left: 0.5rem;
+      }
     }
   }
 }
