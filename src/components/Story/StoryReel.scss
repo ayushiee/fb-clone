@@ -1,0 +1,43 @@
+@import '../../utils/variables';
+
+.story {
+  padding: 0.5rem;
+  height: 10rem;
+  width: 6rem;
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0px 5px 17px -7px $box-shadow;
+  border-radius: 0.5rem;
+  margin-right: 0.5rem;
+  transition: linear 200ms ease-in-out;
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  &:hover {
+    transform: scale(1.04);
+  }
+
+  .storyAvatar {
+    border: 3px solid $primary;
+    margin: 0.1rem;
+  }
+
+  h4 {
+    position: absolute;
+    bottom: 0.6rem;
+    color: $white;
+    box-shadow: 6px 5px 17px -17px $black;
+  }
+}
+
+.storyReel {
+  display: flex;
+  flex-direction: row;
+  margin: 0.6rem;
+//   flex: 0.33;
+  align-items: center;
+//   background-color: thistle;
+}
