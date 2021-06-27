@@ -7,6 +7,10 @@ import SupervisedUserCircleRoundedIcon from '@material-ui/icons/SupervisedUserCi
 import AddRoundedIcon from '@material-ui/icons/AddRounded';
 import NotificationsRoundedIcon from '@material-ui/icons/NotificationsRounded';
 import ArrowDropDownRoundedIcon from '@material-ui/icons/ArrowDropDownRounded';
+import LocalHospitalRoundedIcon from '@material-ui/icons/LocalHospitalRounded';
+import GroupRoundedIcon from '@material-ui/icons/GroupRounded';
+import ChatRoundedIcon from '@material-ui/icons/ChatRounded';
+import VideoLibraryRoundedIcon from '@material-ui/icons/VideoLibraryRounded';
 
 export {
   SearchIcon,
@@ -17,5 +21,9 @@ export {
   AddRoundedIcon,
   ArrowDropDownRoundedIcon,
   NotificationsRoundedIcon,
-  StorefrontRoundedIcon
+  StorefrontRoundedIcon,
+  LocalHospitalRoundedIcon,
+  GroupRoundedIcon,
+  ChatRoundedIcon,
+  VideoLibraryRoundedIcon
 };

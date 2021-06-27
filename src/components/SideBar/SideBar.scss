@@ -1,0 +1,37 @@
+@import '../../utils/variables';
+
+.sideBarRow {
+    display: flex;
+    margin: 0.2rem 0.4rem;
+    cursor: pointer;
+    
+    .row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        // background-color: violet;
+        padding: 0.5rem;
+
+        h4 {
+            margin: 0 0.6rem;
+            color: $button-icon;
+        }
+
+        .image {
+            height: 2.4rem;
+            width: 2.4rem;
+        }
+
+        .rowIcon {
+            color: $primary;
+        }
+
+        
+    }
+}
+
+.sideBar {
+    padding: 0.2rem;
+    // background-color: wheat;
+    flex: 0.33;
+}
