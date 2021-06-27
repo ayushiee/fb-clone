@@ -9,11 +9,11 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        // background-color: violet;
         padding: 0.5rem;
+        transition: linear 200ms;
 
         h4 {
-            margin: 0 0.6rem;
+            margin-left: 0.8rem;
             color: $button-icon;
         }
 
@@ -26,12 +26,15 @@
             color: $primary;
         }
 
-        
+        &:hover {
+            background-color: $button-hover;
+            transform: translateY(-2px);
+            border-radius: 0.2rem;
+        }
     }
 }
 
 .sideBar {
     padding: 0.2rem;
-    // background-color: wheat;
     flex: 0.33;
 }

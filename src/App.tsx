@@ -1,5 +1,6 @@
 import React from 'react';
-import { Header, SideBar } from './components';
+import { Feed, Header, SideBar } from './components';
+import './App.scss';
 
 function App(): React.ReactElement {
   return (
@@ -7,7 +8,8 @@ function App(): React.ReactElement {
       <Header />
       <div className='appBody'>
         <SideBar />
-        {/* - side bar
+        <Feed />
+        {/*
          - feed
          - widgets */}
       </div>
