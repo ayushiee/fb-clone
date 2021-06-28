@@ -1,4 +1,10 @@
-.appBody {
-  display: flex;
-  flex-direction: row;
+@import './utils/variables';
+
+.App {
+  background-color: $app-background;
+  height: 100vh;
+  .appBody {
+    display: flex;
+    flex-direction: row;
+  }
 }

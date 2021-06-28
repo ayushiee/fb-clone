@@ -7,7 +7,6 @@ function Feed(): React.ReactElement {
   return (
     <div className='feed'>
       <StoryReel />
-      {/* Story */}
       {/* Post generator */}
     </div>
   );
