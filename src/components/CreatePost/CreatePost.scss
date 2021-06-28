@@ -1,0 +1,79 @@
+@import '../../utils/variables';
+
+.createPost {
+  background-color: $component-background;
+  border-radius: 0.4rem;
+  padding: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0px 5px 7px -7px $box-shadow;
+
+  .top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.8rem 0.5rem;
+    width: 98%;
+    border-bottom: 1px solid $border-color;
+
+    .form {
+      flex: 1;
+      display: flex;
+
+      input {
+        border-radius: 3rem;
+        padding: 0.7rem 1rem;
+        border: none;
+        background-color: $comment-background;
+        outline: none;
+        border-radius: 3rem;
+        overflow: hidden;
+        margin-left: 0.5rem;
+      }
+
+      button {
+        display: none;
+      }
+
+      .textInput {
+        flex: 1;
+      }
+      .imgUrlInput {
+        flex: 0.5;
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 0.4rem;
+    width: 98%;
+}
+}
+
+.options {
+  transition: linear 200ms;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  padding: 0.3rem 1rem;
+  margin-right: 0.2rem;
+  justify-content: space-evenly;
+  align-items: center;
+
+  &:hover {
+    background-color: $button-hover;
+    transform: translateY(-2px);
+    border-radius: 0.5rem;
+  }
+
+  h5 {
+    color: $comment-text;
+    margin-left: 0.5rem;
+  }
+}

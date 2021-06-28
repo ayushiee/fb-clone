@@ -11,6 +11,9 @@ import LocalHospitalRoundedIcon from '@material-ui/icons/LocalHospitalRounded';
 import GroupRoundedIcon from '@material-ui/icons/GroupRounded';
 import ChatRoundedIcon from '@material-ui/icons/ChatRounded';
 import VideoLibraryRoundedIcon from '@material-ui/icons/VideoLibraryRounded';
+import VideocamRoundedIcon from '@material-ui/icons/VideocamRounded';
+import PhotoLibraryRoundedIcon from '@material-ui/icons/PhotoLibraryRounded';
+import InsertEmoticonOutlinedIcon from '@material-ui/icons/InsertEmoticonOutlined';
 
 export {
   SearchIcon,
@@ -25,5 +28,8 @@ export {
   LocalHospitalRoundedIcon,
   GroupRoundedIcon,
   ChatRoundedIcon,
-  VideoLibraryRoundedIcon
+  VideoLibraryRoundedIcon,
+  VideocamRoundedIcon,
+  PhotoLibraryRoundedIcon,
+  InsertEmoticonOutlinedIcon
 };

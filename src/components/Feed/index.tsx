@@ -1,5 +1,6 @@
 import React from 'react';
 import StoryReel from '../Story';
+import CreatePost from '../CreatePost';
 
 import './Feed.scss';
 
@@ -7,7 +8,8 @@ function Feed(): React.ReactElement {
   return (
     <div className='feed'>
       <StoryReel />
-      {/* Post generator */}
+      <CreatePost />
+      {/* Display post */}
     </div>
   );
 }
