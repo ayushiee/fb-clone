@@ -1,0 +1,23 @@
+@import '../../utils/variables';
+
+.actions {
+  transition: linear 200ms;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  padding: 0.3rem 1rem;
+  margin-right: 0.2rem;
+  justify-content: space-evenly;
+  align-items: center;
+
+  &:hover {
+    background-color: $button-hover;
+    transform: translateY(-2px);
+    border-radius: 0.5rem;
+  }
+
+  h5 {
+    color: $comment-text;
+    margin-left: 0.5rem;
+  }
+}

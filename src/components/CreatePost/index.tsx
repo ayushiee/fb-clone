@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-
 import { Avatar } from '@material-ui/core';
+
+import { PostAction } from '..';
 import { InsertEmoticonOutlinedIcon, PhotoLibraryRoundedIcon, VideocamRoundedIcon } from '../../utils/icons';
+
 import './CreatePost.scss';
 
 function CreatePost(): React.ReactElement {
@@ -41,7 +43,7 @@ function CreatePost(): React.ReactElement {
       </div>
       <div className='bottom'>
         {bottomIcon.map(({ Icon, title, color }, index) => (
-          <PostOptions key={index} Icon={Icon} title={title} color={color} />
+          <PostAction key={index} Icon={Icon} title={title} color={color} />
         ))}
       </div>
     </div>
@@ -67,19 +69,3 @@ const bottomIcon = [
     color: 'orange'
   }
 ];
-
-interface PostOptionProps {
-  Icon: any;
-  title: string;
-  color: string;
-}
-
-function PostOptions(props: PostOptionProps): React.ReactElement {
-  const { Icon, title, color } = props;
-  return (
-    <div className='options'>
-      <Icon style={{ color: `${color}` }} />
-      <h5>{title}</h5>
-    </div>
-  );
-}
