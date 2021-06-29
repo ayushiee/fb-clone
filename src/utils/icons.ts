@@ -14,6 +14,9 @@ import VideoLibraryRoundedIcon from '@material-ui/icons/VideoLibraryRounded';
 import VideocamRoundedIcon from '@material-ui/icons/VideocamRounded';
 import PhotoLibraryRoundedIcon from '@material-ui/icons/PhotoLibraryRounded';
 import InsertEmoticonOutlinedIcon from '@material-ui/icons/InsertEmoticonOutlined';
+import ThumbUpRoundedIcon from '@material-ui/icons/ThumbUpRounded';
+import ChatBubbleOutlineRoundedIcon from '@material-ui/icons/ChatBubbleOutlineRounded';
+import NearMeRoundedIcon from '@material-ui/icons/NearMeRounded';
 
 export {
   SearchIcon,
@@ -31,5 +34,8 @@ export {
   VideoLibraryRoundedIcon,
   VideocamRoundedIcon,
   PhotoLibraryRoundedIcon,
-  InsertEmoticonOutlinedIcon
+  InsertEmoticonOutlinedIcon,
+  ThumbUpRoundedIcon,
+  ChatBubbleOutlineRoundedIcon,
+  NearMeRoundedIcon
 };
