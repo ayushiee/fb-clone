@@ -10,7 +10,13 @@ function CreatePost(): React.ReactElement {
 
   const handleSubmit = (event: any) => {
     event.preventDefault();
+
+    // TODO: Db connections
+
+    setInput('');
+    setImgUrl('');
   };
+
   return (
     <div className='createPost'>
       <div className='top'>

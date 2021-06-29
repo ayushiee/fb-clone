@@ -1,0 +1,51 @@
+@import '../../utils/variables';
+
+.post {
+  background-color: $component-background;
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-shadow: 0px 5px 7px -7px $box-shadow;
+  margin: 0.8rem;
+
+  .top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.3rem;
+
+    .info {
+      margin-left: 0.6rem;
+
+      h4 {
+        text-transform: capitalize;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      span {
+        font-size: small;
+        color: $comment-text;
+      }
+    }
+  }
+
+  .text {
+    display: flex;
+    padding: 0.3rem 0;
+    flex-wrap: wrap;
+    background-color: teal;
+    margin: 0.6rem 0.3rem;
+    word-break: break-all;
+    word-wrap: break-word;
+  }
+
+  .image {
+    padding: 0.3rem;
+    img {
+      width: 100%;
+    }
+  }
+}
