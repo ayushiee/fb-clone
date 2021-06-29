@@ -35,10 +35,19 @@ function Post(props: PostProps): React.ReactElement {
         {/* {iconList.map(({ Icon, title, color }, index) => (
           <PostAction key={index} Icon={Icon} title={title} color={color} />
         ))} */}
+        <div className='action'>
+          <ThumbUpRoundedIcon className='postAction' />
+          <h4>Like</h4>
+        </div>
 
-        <ThumbUpRoundedIcon className='postAction' onClick={() => console.log('liked!')} />
-        <ChatBubbleOutlineRoundedIcon className='postAction' />
-        <NearMeRoundedIcon className='postAction' />
+        <div className='action'>
+          <ChatBubbleOutlineRoundedIcon className='postAction' />
+          <h4>Comment</h4>
+        </div>
+        <div className='action'>
+          <NearMeRoundedIcon className='postAction' />
+          <h4>Share</h4>
+        </div>
       </div>
     </div>
   );

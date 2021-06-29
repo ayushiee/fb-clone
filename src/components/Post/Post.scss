@@ -47,25 +47,36 @@
       width: 100%;
     }
   }
-
-  
 }
 
-.actions {
-  padding: 0.6rem 0.3rem;
+.bottomAction {
+  padding: 0.3rem 0.3rem 0;
   border-top: 1px solid $border-color;
   display: flex;
   align-items: center;
-  
-  .postAction {
-    margin-right: 0.8rem;
-    color: $primary;
-    transition: linear 200ms;
+  justify-content: space-between;
 
+  .action {
+    transition: linear 200ms;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem 1rem ;
+    flex: 1;
+    
     &:hover {
-      cursor: pointer;
+      background-color: $button-hover;
       transform: translateY(-2px);
-      color: $primary-light;
+      border-radius: 0.3rem;
+    }
+
+    h4 {
+      color: $comment-text;
+      margin-left: 0.5rem;
+    }
+    .postAction {
+      margin: 0 0.5rem;
+      color: $icon;
     }
   }
 }
