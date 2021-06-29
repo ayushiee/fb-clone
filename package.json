@@ -3,14 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "start:vite": "vite --host",
-    "build:vite": "tsc && vite build",
-    "serve:vite": "vite preview --host"
-  },
+    "start": "vite --host",
+    "build": "tsc && vite build",
+    "serve": "vite preview --host",
+    "test:cra": "react-scripts test",
+    "start:cra": "react-scripts start",
+    "build:cra": "react-scripts build"
+   },
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
