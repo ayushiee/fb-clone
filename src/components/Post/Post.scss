@@ -36,7 +36,6 @@
     display: flex;
     padding: 0.3rem 0;
     flex-wrap: wrap;
-    background-color: teal;
     margin: 0.6rem 0.3rem;
     word-break: break-all;
     word-wrap: break-word;
@@ -46,6 +45,27 @@
     padding: 0.3rem;
     img {
       width: 100%;
+    }
+  }
+
+  
+}
+
+.actions {
+  padding: 0.6rem 0.3rem;
+  border-top: 1px solid $border-color;
+  display: flex;
+  align-items: center;
+  
+  .postAction {
+    margin-right: 0.8rem;
+    color: $primary;
+    transition: linear 200ms;
+
+    &:hover {
+      cursor: pointer;
+      transform: translateY(-2px);
+      color: $primary-light;
     }
   }
 }

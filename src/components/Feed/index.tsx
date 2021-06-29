@@ -1,5 +1,5 @@
 import React from 'react';
-import StoryReel from '../Story';
+import StoryReel from '../StoryReel';
 import CreatePost from '../CreatePost';
 import Post from '../Post';
 
