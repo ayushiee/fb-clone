@@ -25,12 +25,16 @@ function Post(props: PostProps): React.ReactElement {
           <span>time {timestamp}</span>
         </div>
       </div>
-      <div className='text'>
-        <p>{text}</p>
-      </div>
-      <div className='image'>
-        <img src={image} alt='Post Image' />
-      </div>
+      {text && (
+        <div className='text'>
+          <p>{text}</p>
+        </div>
+      )}
+      {image && (
+        <div className='image'>
+          <img src={image} alt='Post Image' />
+        </div>
+      )}
       <div className='bottomAction'>
         {/* {iconList.map(({ Icon, title, color }, index) => (
           <PostAction key={index} Icon={Icon} title={title} color={color} />

@@ -8,7 +8,7 @@ function Widget(): React.ReactElement {
       <iframe
         className='widgetIframe'
         title='facebook-post'
-        src='https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/nytimes/&tabs=timeline&width=340&height=1500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId'
+        src='https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/nytimes/&tabs=timeline&width=340&height=1000&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId'
         width='340'
         height='100%'
         style={{ border: 'none', overflow: 'hidden' }}

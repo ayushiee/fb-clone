@@ -3,8 +3,11 @@
 .App {
   background-color: $app-background;
   height: 100vh;
+  overflow: scroll;
+
   .appBody {
     display: flex;
     flex-direction: row;
+    // height: 100vh;
   }
 }
