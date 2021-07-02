@@ -1,0 +1,64 @@
+@import '../../utils/variables';
+
+.login {
+  height: 100%;
+  background-color: $app-background;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+//   @media (max-width: 800px) {
+//       flex-direction: column;
+//   }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0.8;
+    img {
+      width: 28rem;
+    }
+    h3 {
+      margin-top: -2rem;
+      width: 22rem;
+      font-weight: 400;
+    }
+  }
+
+  .loginCard {
+    display: flex;
+    flex: 0.8;
+    align-items: flex-start;
+    flex-direction: column;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      background-color: $white;
+      padding: 3rem;
+      border: 1px solid $border-color;
+      border-radius: 0.4rem;
+    }
+
+    .title {
+      font-size: 2.1rem;
+      font-weight: 600;
+    }
+
+    .button {
+      background-color: $primary;
+      color: $white;
+      align-self: bottom;
+      margin-top: 3rem;
+      padding: 0.4rem 4rem;
+      transition: linear 200ms;
+
+      &:hover {
+        background-color: $primary-light;
+        transform: translateY(-2px);
+      }
+    }
+  }
+}

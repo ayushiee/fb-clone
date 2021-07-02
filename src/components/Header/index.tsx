@@ -19,7 +19,11 @@ export default function Header(): React.ReactElement {
   return (
     <div className='header'>
       <div className='headerLeft'>
-        <img src='https://1000logos.net/wp-content/uploads/2021/04/Facebook-logo.png' alt='' className='logo' />
+        <img
+          src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/100px-Facebook_f_logo_%282019%29.svg.png'
+          alt='fb logo'
+          className='logo'
+        />
         <div className='searchInput'>
           <SearchIcon className='searchIcon' />
           <input type='text' placeholder='Search' className='inputBar' />
