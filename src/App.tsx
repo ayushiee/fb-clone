@@ -1,17 +1,15 @@
 import React from 'react';
-import { Feed, Header, SideBar, Widget } from './components';
+
+import { Login, Home } from './pages';
 import './App.scss';
 
 function App(): React.ReactElement {
+  const user = null;
   return (
     <div className='App'>
-      <Header />
-      <div className='appBody'>
-        <SideBar />
-        <Feed />
-        <Widget />
-      </div>
-    </div>
+      <Login />
+      {/* <Home /> */}
+     </div>
   );
 }
 
