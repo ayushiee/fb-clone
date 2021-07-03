@@ -1,16 +1,23 @@
 import React from 'react';
 import { Button } from '@material-ui/core';
+import { useHistory } from 'react-router';
 
 import './Login.scss';
-import { auth, provider } from '../../utils/firebase';
+import { useAuth } from '../../context/auth';
+import { ROUTES } from '../../utils/constants';
 
 function Login(): React.ReactElement {
-  const login = () => {
-    auth
-      .signInWithPopup(provider)
-      .then(result => console.log(result.user))
-      .catch(error => console.log(error.message));
-   };
+  const { signin } = useAuth();
+  const history = useHistory();
+
+  const onSignIn = async () => {
+    try {
+      await signin();
+      history.push(ROUTES.HOME);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
   return (
     <div className='login'>
@@ -22,7 +29,7 @@ function Login(): React.ReactElement {
         <div className='card'>
           <span className='title'>Sign In</span>
           <p>Sign in with your Google account</p>
-          <Button className='button' type='submit' onClick={login}>
+          <Button className='button' type='submit' onClick={onSignIn}>
             SIGN IN
           </Button>
         </div>
