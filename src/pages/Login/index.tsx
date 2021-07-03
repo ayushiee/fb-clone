@@ -1,12 +1,17 @@
 import React from 'react';
-import { Button, CardContent, Card } from '@material-ui/core';
+import { Button } from '@material-ui/core';
 
 import './Login.scss';
+import { auth, provider } from '../../utils/firebase';
 
 function Login(): React.ReactElement {
   const login = () => {
-    console.log('logged in');
-  };
+    auth
+      .signInWithPopup(provider)
+      .then(result => console.log(result))
+      .catch(error => console.log(error.message));
+   };
+
   return (
     <div className='login'>
       <div className='logo'>
