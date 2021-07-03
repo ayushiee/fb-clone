@@ -7,7 +7,7 @@ interface AuthContextProps {
 }
 
 interface AuthContext {
-  //   signin?: (() => Promise<firebase.auth.UserCredential> | undefined) | undefined;
+  signin: () => Promise<firebase.auth.UserCredential>;
   currentUser: firebase.User | null;
   logout: () => Promise<void>;
   isAuthenticated: boolean;
@@ -24,12 +24,9 @@ export function AuthProvider({ children }: AuthContextProps): JSX.Element {
   const [loading, setLoading] = useState<boolean>(true);
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(true);
 
-  //   const signin = async () => {
-  //     return auth
-  //       .signInWithPopup(provider)
-  //       .then(result => console.log(result.user))
-  //       .catch(error => console.log(error.message));
-  //   };
+  const signin = async ():Promise<firebase.auth.UserCredential> => {
+    return auth.signInWithPopup(provider)
+  };
 
   const logout = async (): Promise<void> => {
     return auth.signOut();
@@ -44,6 +41,6 @@ export function AuthProvider({ children }: AuthContextProps): JSX.Element {
     return unsubscribe;
   }, []);
 
-  const value: AuthContext = { currentUser, logout, isAuthenticated };
+  const value: AuthContext = { currentUser, logout, isAuthenticated, signin };
   return <AuthContext.Provider value={value}>{!loading && children}</AuthContext.Provider>;
 }
