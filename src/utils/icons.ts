@@ -17,6 +17,7 @@ import InsertEmoticonOutlinedIcon from '@material-ui/icons/InsertEmoticonOutline
 import ThumbUpRoundedIcon from '@material-ui/icons/ThumbUpRounded';
 import ChatBubbleOutlineRoundedIcon from '@material-ui/icons/ChatBubbleOutlineRounded';
 import NearMeRoundedIcon from '@material-ui/icons/NearMeRounded';
+import ExitToAppRoundedIcon from '@material-ui/icons/ExitToAppRounded';
 
 export {
   SearchIcon,
@@ -37,5 +38,6 @@ export {
   InsertEmoticonOutlinedIcon,
   ThumbUpRoundedIcon,
   ChatBubbleOutlineRoundedIcon,
-  NearMeRoundedIcon
+  NearMeRoundedIcon,
+  ExitToAppRoundedIcon
 };

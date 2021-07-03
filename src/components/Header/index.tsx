@@ -4,18 +4,25 @@ import { Avatar, IconButton } from '@material-ui/core';
 import {
   SearchIcon,
   HomeRoundedIcon,
-  FlagRoundedIcon,
   SubscriptionsRoundedIcon,
   SupervisedUserCircleRoundedIcon,
   AddRoundedIcon,
-  ArrowDropDownRoundedIcon,
   NotificationsRoundedIcon,
-  StorefrontRoundedIcon
+  StorefrontRoundedIcon,
+  ExitToAppRoundedIcon
 } from '../../utils/icons';
 
 import './Header.scss';
+import { useAuth } from '../../context/auth';
 
-export default function Header(): React.ReactElement {
+interface HeaderProps {
+  photoUrl?: string | null;
+  username?: string | null;
+}
+
+export default function Header({ photoUrl, username }: HeaderProps): React.ReactElement {
+  const { currentUser } = useAuth();
+
   return (
     <div className='header'>
       <div className='headerLeft'>
@@ -34,9 +41,6 @@ export default function Header(): React.ReactElement {
         <div className='activeOption'>
           <HomeRoundedIcon fontSize='large' className='icon' />
         </div>
-        {/* <div className='option'>
-          <FlagRoundedIcon fontSize='large' />
-        </div> */}
         <div className='option'>
           <SubscriptionsRoundedIcon fontSize='large' className='icon' />
         </div>
@@ -50,8 +54,8 @@ export default function Header(): React.ReactElement {
 
       <div className='headerRight'>
         <div className='info'>
-          <Avatar />
-          <h4>User name</h4>
+          <Avatar src={photoUrl} />
+          <h4>{username}</h4>
         </div>
         <IconButton>
           <AddRoundedIcon />
