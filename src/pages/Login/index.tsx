@@ -8,7 +8,7 @@ function Login(): React.ReactElement {
   const login = () => {
     auth
       .signInWithPopup(provider)
-      .then(result => console.log(result))
+      .then(result => console.log(result.user))
       .catch(error => console.log(error.message));
    };
 
