@@ -4,11 +4,10 @@
   "private": true,
   "scripts": {
     "start": "vite --host",
-    "build": "tsc && vite build",
+    "build": "yarn bootstrap && tsc && vite build",
     "serve": "vite preview --host",
-    "test:cra": "react-scripts test",
-    "start:cra": "react-scripts start",
-    "build:cra": "react-scripts build"
+    "build:dev": "tsc && vite build",
+    "bootstrap": "./scripts/env-to-config.sh"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.4",

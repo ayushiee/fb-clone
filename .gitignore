@@ -28,3 +28,5 @@ config.json
 
 debug.log
 firebase-debug.log
+
+.firebase
