@@ -5,6 +5,7 @@ import { useHistory } from 'react-router';
 import './Login.scss';
 import { useAuth } from '../../context/auth';
 import { ROUTES } from '../../utils/constants';
+import fbNameLogo from '../../assets/fbNameLogo.png';
 
 function Login(): React.ReactElement {
   const { signin } = useAuth();
@@ -22,7 +23,7 @@ function Login(): React.ReactElement {
   return (
     <div className='login'>
       <div className='logo'>
-        <img src='https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg' alt='name logo' />
+        <img src={fbNameLogo} alt='name logo' />
         <h3>Facebook clone made using Typescript and React.</h3>
       </div>
       <div className='loginCard'>

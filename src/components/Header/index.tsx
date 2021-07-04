@@ -14,6 +14,7 @@ import {
 } from '../../utils/icons';
 import { useAuth } from '../../context/auth';
 import { ROUTES } from '../../utils/constants';
+import fbImgLogo from '../../assets/fbImgLogo.png';
 import './Header.scss';
 
 interface HeaderProps {
@@ -37,11 +38,7 @@ export default function Header({ photoUrl, username }: HeaderProps): React.React
   return (
     <div className='header'>
       <div className='headerLeft'>
-        <img
-          src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/100px-Facebook_f_logo_%282019%29.svg.png'
-          alt='fb logo'
-          className='logo'
-        />
+        <img src={fbImgLogo} alt='fb logo' className='logo' />
         <div className='searchInput'>
           <SearchIcon className='searchIcon' />
           <input type='text' placeholder='Search' className='inputBar' />
