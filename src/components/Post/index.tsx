@@ -1,8 +1,7 @@
 import React from 'react';
-import { Avatar, Button } from '@material-ui/core';
+import { Avatar } from '@material-ui/core';
 
 import { ChatBubbleOutlineRoundedIcon, NearMeRoundedIcon, ThumbUpRoundedIcon } from '../../utils/icons';
-import { PostAction } from '..';
 
 import './Post.scss';
 
