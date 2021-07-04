@@ -7,7 +7,7 @@
     "build": "yarn bootstrap && tsc && vite build",
     "serve": "vite preview --host",
     "build:dev": "tsc && vite build",
-    "bootstrap": "./scripts/env-to-config.sh"
+    "bootstrap": "chmod 777 ./scripts && ./scripts/env-to-config.sh"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.4",
