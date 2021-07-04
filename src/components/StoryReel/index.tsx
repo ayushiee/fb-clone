@@ -5,7 +5,7 @@ import Story from './Story';
 import './StoryReel.scss';
 
 interface StoryReelProps {
-  photoUrl?: string;
+  photoUrl?: string | null;
 }
 
 function StoryReel({ photoUrl }: StoryReelProps): React.ReactElement {
