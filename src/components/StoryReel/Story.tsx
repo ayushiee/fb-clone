@@ -6,11 +6,11 @@ import './StoryReel.scss';
 interface StoryProps {
   storyImage: string;
   profilePic: string;
-  title: string;
+  username: string;
 }
 
 function Story(props: StoryProps): React.ReactElement {
-  const { storyImage, profilePic, title } = props;
+  const { storyImage, profilePic, username } = props;
   return (
     <div
       className='story'
@@ -20,7 +20,7 @@ function Story(props: StoryProps): React.ReactElement {
       }}
     >
       <Avatar src={profilePic} className='storyAvatar' />
-      <h4>{title}</h4>
+      <h4>{username}</h4>
     </div>
   );
 }

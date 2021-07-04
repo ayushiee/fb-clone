@@ -25,7 +25,7 @@ function Feed({ photoUrl, username }: FeedProps): React.ReactElement {
 
   return (
     <div className='feed'>
-      <StoryReel />
+      <StoryReel photoUrl={photoUrl} />
       <CreatePost photoUrl={photoUrl} username={username} />
       {posts.map((post: DocumentData) => (
         <Post
