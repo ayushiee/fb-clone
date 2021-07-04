@@ -10,8 +10,8 @@ import './CreatePost.scss';
 import cuid from 'cuid';
 
 interface CreatePostProps {
-  photoUrl?: string | null;
-  username?: string | null;
+  photoUrl?: string;
+  username: string | null;
 }
 
 function CreatePost({ photoUrl, username }: CreatePostProps): React.ReactElement {

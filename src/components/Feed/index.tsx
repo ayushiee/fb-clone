@@ -8,12 +8,13 @@ import { firestore, DocumentData } from '../../utils/firebase';
 import './Feed.scss';
 
 interface FeedProps {
-  photoUrl?: string | null;
-  username?: string | null;
+  photoUrl?: string;
+  username: string | null;
 }
 
 function Feed({ photoUrl, username }: FeedProps): React.ReactElement {
   const [posts, setPosts] = useState<DocumentData>([]);
+
   useEffect(() => {
     firestore
       .collection('posts')

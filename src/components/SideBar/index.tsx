@@ -12,8 +12,8 @@ import {
 import './SideBar.scss';
 
 interface SideBarProps {
-  photoUrl?: string | null;
-  username?: string | null;
+  photoUrl?: string;
+  username: string | null;
 }
 
 function SideBar({ photoUrl, username }: SideBarProps): React.ReactElement {

@@ -6,8 +6,8 @@ import './Home.scss';
 
 function Home(): React.ReactElement {
   const { currentUser } = useAuth();
-  const photo = currentUser?.photoURL;
-  const user = currentUser?.displayName;
+  const photo = currentUser?.photoURL ?? undefined;
+  const user = currentUser?.displayName ?? null;
 
   return (
     <>

@@ -18,8 +18,8 @@ import fbImgLogo from '../../assets/fbImgLogo.png';
 import './Header.scss';
 
 interface HeaderProps {
-  photoUrl?: string | null;
-  username?: string | null;
+  photoUrl?: string;
+  username: string | null;
 }
 
 export default function Header({ photoUrl, username }: HeaderProps): React.ReactElement {
