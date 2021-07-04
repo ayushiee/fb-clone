@@ -1,26 +1,42 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import firebase from 'firebase';
 import StoryReel from '../StoryReel';
 import CreatePost from '../CreatePost';
 import Post from '../Post';
+import { firestore, DocumentData } from '../../utils/firebase';
 
 import './Feed.scss';
 
-interface FeedProps{
+interface FeedProps {
   photoUrl?: string | null;
   username?: string | null;
 }
 
-function Feed({photoUrl, username}: FeedProps): React.ReactElement {
+function Feed({ photoUrl, username }: FeedProps): React.ReactElement {
+  const [posts, setPosts] = useState<DocumentData>([]);
+  useEffect(() => {
+    firestore
+      .collection('posts')
+      .orderBy('timestamp', 'desc')
+      .onSnapshot(snapshot => {
+        setPosts(snapshot.docs.map(doc => ({ id: doc.id, data: doc.data() })));
+      });
+  }, []);
+
   return (
     <div className='feed'>
       <StoryReel />
-      <CreatePost photoUrl={photoUrl} username={username}/>
-      <Post
-        username='username'
-        profilePic='https://images.unsplash.com/photo-1492546662075-aabebf46dee2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1900&q=80'
-        image={'https://images.unsplash.com/photo-1593642532009-6ba71e22f468?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80'}
-        text='hello'
-      />
+      <CreatePost photoUrl={photoUrl} username={username} />
+      {posts.map((post: DocumentData) => (
+        <Post
+          key={post.id}
+          username={post.data.username}
+          profilePic={post.data.profilePic}
+          text={post.data.text}
+          image={post.data.image}
+          timestamp={post.data.timestamp.toDate().toDateString()}
+        />
+      ))}
     </div>
   );
 }

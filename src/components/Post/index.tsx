@@ -10,7 +10,7 @@ interface PostProps {
   profilePic: string;
   username: string;
   text?: string;
-  timestamp?: Date;
+  timestamp: string;
   image?: string;
 }
 
@@ -22,7 +22,10 @@ function Post(props: PostProps): React.ReactElement {
         <Avatar src={profilePic} />
         <div className='info'>
           <h4>{username}</h4>
-          <span>time {timestamp}</span>
+          <span>
+            {' '}
+            {timestamp}
+          </span>
         </div>
       </div>
       {text && (

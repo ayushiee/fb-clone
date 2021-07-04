@@ -1,24 +1,34 @@
 import React, { useState } from 'react';
 import { Avatar } from '@material-ui/core';
+import firebase from 'firebase';
 
+import { firestore } from '../../utils/firebase';
 import { PostAction } from '..';
 import { InsertEmoticonOutlinedIcon, PhotoLibraryRoundedIcon, VideocamRoundedIcon } from '../../utils/icons';
 
 import './CreatePost.scss';
+import cuid from 'cuid';
 
 interface CreatePostProps {
   photoUrl?: string | null;
   username?: string | null;
 }
 
-function CreatePost({photoUrl, username}: CreatePostProps): React.ReactElement {
+function CreatePost({ photoUrl, username }: CreatePostProps): React.ReactElement {
   const [input, setInput] = useState<string>('');
   const [imgUrl, setImgUrl] = useState<string>('');
 
-  const handleSubmit = (event: any) => {
+  const handleSubmit = async (event: any) => {
     event.preventDefault();
 
-    // TODO: Db connections
+    const id: string = cuid();
+    await firestore.collection('posts').doc(id).set({
+      profilePic: photoUrl,
+      username: username,
+      timestamp: new Date(),
+      image: imgUrl,
+      text: input.trim()
+    });
 
     setInput('');
     setImgUrl('');
