@@ -1,5 +1,6 @@
 import React from 'react';
 import { Avatar, IconButton } from '@material-ui/core';
+import { useHistory } from 'react-router-dom';
 
 import {
   SearchIcon,
@@ -11,9 +12,9 @@ import {
   StorefrontRoundedIcon,
   ExitToAppRoundedIcon
 } from '../../utils/icons';
-
-import './Header.scss';
 import { useAuth } from '../../context/auth';
+import { ROUTES } from '../../utils/constants';
+import './Header.scss';
 
 interface HeaderProps {
   photoUrl?: string | null;
@@ -21,7 +22,17 @@ interface HeaderProps {
 }
 
 export default function Header({ photoUrl, username }: HeaderProps): React.ReactElement {
-  const { currentUser } = useAuth();
+  const { logout } = useAuth();
+  const history = useHistory();
+
+  const onLogout = async () => {
+    try {
+      await logout();
+      history.push(ROUTES.SIGNIN);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
   return (
     <div className='header'>
@@ -63,8 +74,8 @@ export default function Header({ photoUrl, username }: HeaderProps): React.React
         <IconButton>
           <NotificationsRoundedIcon />
         </IconButton>
-        <IconButton>
-          <ArrowDropDownRoundedIcon />
+        <IconButton onClick={onLogout}>
+          <ExitToAppRoundedIcon />
         </IconButton>
       </div>
     </div>
