@@ -6,7 +6,12 @@ import { InsertEmoticonOutlinedIcon, PhotoLibraryRoundedIcon, VideocamRoundedIco
 
 import './CreatePost.scss';
 
-function CreatePost(): React.ReactElement {
+interface CreatePostProps {
+  photoUrl?: string | null;
+  username?: string | null;
+}
+
+function CreatePost({photoUrl, username}: CreatePostProps): React.ReactElement {
   const [input, setInput] = useState<string>('');
   const [imgUrl, setImgUrl] = useState<string>('');
 
@@ -22,13 +27,13 @@ function CreatePost(): React.ReactElement {
   return (
     <div className='createPost'>
       <div className='top'>
-        <Avatar />
+        <Avatar src={photoUrl} />
         <form className='form'>
           <input
             className='textInput'
             value={input}
             onChange={e => setInput(e.target.value)}
-            placeholder="What's on your mind?"
+            placeholder={`What's on your mind, ${username}?`}
           />
           <input
             className='imgUrlInput'

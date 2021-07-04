@@ -4,8 +4,8 @@ import React from 'react';
 import './SideBar.scss';
 
 interface SideBarRowProps {
-  src?: string;
-  title: string;
+  src?: string | null;
+  title: string | null;
   url?: string;
   Icon?: any;
 }

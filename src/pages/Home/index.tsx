@@ -6,13 +6,15 @@ import './Home.scss';
 
 function Home(): React.ReactElement {
   const { currentUser } = useAuth();
+  const photo = currentUser?.photoURL;
+  const user = currentUser?.displayName;
 
   return (
     <>
-      <Header photoUrl={currentUser?.photoURL} username={currentUser?.displayName} />
+      <Header photoUrl={photo} username={user} />
       <div className='homeBody'>
-        <SideBar />
-        <Feed />
+        <SideBar photoUrl={photo} username={user} />
+        <Feed photoUrl={photo} username={user}/>
         <Widget />
       </div>
     </>
