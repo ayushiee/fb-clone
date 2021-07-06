@@ -1,0 +1,61 @@
+//breakpoints
+$xs: 400px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+//Font-size
+$base-font-size: 16px;
+$default-min-font-size: 8px;
+$default-max-font-size: 32px;
+
+
+@mixin for-extra-large-devices {
+	@media (max-width: $xl) {
+		@content;
+	}
+}
+
+@mixin for-large-devices {
+	@media (max-width: $lg) {
+		@content;
+	}
+}
+
+@mixin for-small-screens {
+	@media (max-width: $md) {
+		@content;
+	}
+}
+
+@mixin for-mobile-only {
+	@media only screen and (max-width: $sm) and (orientation: portrait) {
+		@content;
+	}
+}
+
+@mixin fluid-type(
+	$min-font-size: $default-min-font-size,
+	$max-font-size: $default-max-font-size,
+	$lower-range: $xs,
+	$upper-range: $xl
+) {
+	font-size: calc(
+		#{$min-font-size} + #{(
+				($max-font-size / ($max-font-size * 0 + 1)) -
+					($min-font-size / ($min-font-size * 0 + 1))
+			)} * ((100vw - #{$lower-range}) / #{(
+						($upper-range / ($upper-range * 0 + 1)) -
+							($lower-range / ($lower-range * 0 + 1))
+					)})
+	);
+
+	@media screen and (max-width: $lower-range) {
+		font-size: $min-font-size;
+	}
+
+	@media screen and (min-width: $upper-range) {
+		font-size: $max-font-size;
+	}
+}
