@@ -1,4 +1,5 @@
 @import '../../utils/variables';
+@import '../../utils/mixins';
 
 .login {
   height: 100%;
@@ -8,22 +9,41 @@
   align-items: center;
   justify-content: center;
 
-//   @media (max-width: 800px) {
-//       flex-direction: column;
-//   }
+  @include for-small-screens {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 
   .logo {
     display: flex;
     flex-direction: column;
     align-items: center;
     flex: 1;
+    
+    @include for-small-screens {
+      flex: 0.1;
+    }
+
     img {
       width: 28rem;
+
+      @include for-mobile-only {
+        width: 19rem;
+      }
     }
+
     h3 {
       margin-top: -2rem;
       width: 22rem;
       font-weight: 400;
+
+      @include for-mobile-only {
+        width: 16rem;
+        text-align: center;
+        font-size: 1.1rem;
+        margin-top: -1rem;
+      }
     }
   }
 
@@ -40,11 +60,16 @@
       padding: 3rem;
       border: 1px solid $border-color;
       border-radius: 0.4rem;
+
+      @include for-mobile-only {
+        padding: 1.8rem;
+      }
     }
 
     .title {
       font-size: 2.1rem;
       font-weight: 600;
+      @include fluid-type(1.8rem, 2.1rem)
     }
 
     .button {
