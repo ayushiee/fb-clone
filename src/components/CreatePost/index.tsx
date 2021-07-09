@@ -56,14 +56,11 @@ function CreatePost({ photoUrl, username }: CreatePostProps): React.ReactElement
             onChange={e => setImgUrl(e.target.value)}
             placeholder='Image URL (optional)'
           />
-          {/* <button onClick={handleSubmit} type='submit'> */}
           <div className='button' >
             <IconButton onClick={handleSubmit}>
               <SendRoundedIcon color='primary' />
             </IconButton>
           </div>
-          {/* Hidden Submit */}
-          {/* </button> */}
         </form>
       </div>
       <div className='bottom'>
