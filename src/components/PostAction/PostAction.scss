@@ -1,4 +1,5 @@
 @import '../../utils/variables';
+@import '../../utils/mixins';
 
 .actions {
   transition: linear 200ms;
@@ -10,6 +11,10 @@
   justify-content: space-evenly;
   align-items: center;
 
+  @include for-small-screens {
+    padding: 0.3rem 1rem;
+  }
+
   &:hover {
     background-color: $button-hover;
     transform: translateY(-2px);
@@ -19,5 +24,9 @@
   h5 {
     color: $comment-text;
     margin-left: 0.5rem;
+
+    @include for-small-screens {
+      display: none;
+    }
   }
 }

@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
-import { Avatar } from '@material-ui/core';
+import { Avatar, IconButton } from '@material-ui/core';
 import firebase from 'firebase';
 
 import { firestore } from '../../utils/firebase';
 import { PostAction } from '..';
-import { InsertEmoticonOutlinedIcon, PhotoLibraryRoundedIcon, VideocamRoundedIcon } from '../../utils/icons';
+import {
+  InsertEmoticonOutlinedIcon,
+  PhotoLibraryRoundedIcon,
+  VideocamRoundedIcon,
+  SendRoundedIcon
+} from '../../utils/icons';
 
 import './CreatePost.scss';
 import cuid from 'cuid';
@@ -51,9 +56,14 @@ function CreatePost({ photoUrl, username }: CreatePostProps): React.ReactElement
             onChange={e => setImgUrl(e.target.value)}
             placeholder='Image URL (optional)'
           />
-          <button onClick={handleSubmit} type='submit'>
-            Hidden Submit
-          </button>
+          {/* <button onClick={handleSubmit} type='submit'> */}
+          <div className='button' >
+            <IconButton onClick={handleSubmit}>
+              <SendRoundedIcon color='primary' />
+            </IconButton>
+          </div>
+          {/* Hidden Submit */}
+          {/* </button> */}
         </form>
       </div>
       <div className='bottom'>

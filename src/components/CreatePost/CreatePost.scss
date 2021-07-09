@@ -15,7 +15,10 @@
   @include for-xl-devices {
     width: 90%;
   }
-  
+
+  @include for-large-devices {
+    width: 85%;
+  }
 
   .top {
     display: flex;
@@ -26,10 +29,18 @@
     width: 99%;
     border-bottom: 1px solid $border-color;
 
+    @include for-small-screens {
+      overflow: hidden;
+    }
+
     .form {
       flex: 1;
       display: flex;
 
+      @include for-small-screens {
+        flex-wrap: wrap;
+      }
+  
       input {
         border-radius: 3rem;
         padding: 0.7rem 1rem;
@@ -41,8 +52,11 @@
         margin-left: 0.5rem;
       }
 
-      button {
+      .button {
         display: none;
+        @include for-small-screens {
+          display: flex;
+        }
       }
 
       .textInput {
@@ -60,6 +74,9 @@
     justify-content: space-evenly;
     padding-top: 0.4rem;
     width: 98%;
-}
-}
 
+    @include for-small-screens {
+      padding: 0.2rem;
+    }
+  }
+}

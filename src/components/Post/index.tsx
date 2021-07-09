@@ -21,10 +21,7 @@ function Post(props: PostProps): React.ReactElement {
         <Avatar src={profilePic} />
         <div className='info'>
           <h4>{username}</h4>
-          <span>
-            {' '}
-            {timestamp}
-          </span>
+          <span> {timestamp}</span>
         </div>
       </div>
       {text && (
@@ -38,14 +35,10 @@ function Post(props: PostProps): React.ReactElement {
         </div>
       )}
       <div className='bottomAction'>
-        {/* {iconList.map(({ Icon, title, color }, index) => (
-          <PostAction key={index} Icon={Icon} title={title} color={color} />
-        ))} */}
         <div className='action'>
           <ThumbUpRoundedIcon className='postAction' />
           <h4>Like</h4>
         </div>
-
         <div className='action'>
           <ChatBubbleOutlineRoundedIcon className='postAction' />
           <h4>Comment</h4>

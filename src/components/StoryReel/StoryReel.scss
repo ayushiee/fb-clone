@@ -17,6 +17,11 @@
   justify-content: space-between;
   align-items: flex-end;
 
+  @include for-small-screens {
+    height: 8rem;
+    width: 5rem;
+  }
+
   &:hover {
     transform: scale(1.04);
   }
@@ -31,6 +36,10 @@
     bottom: 0.6rem;
     color: $white;
     box-shadow: 6px 5px 17px -17px $black;
+
+    @include for-small-screens {
+      font-size: smaller;
+    }
   }
 }
 
@@ -46,6 +55,16 @@
   overflow: hidden;
   transition: linear 200ms ease-in-out;
   cursor: pointer;
+
+  @include for-small-screens {
+    height: 9rem;
+    width: 6rem;
+  }
+
+  @include for-mobile-only {
+    display: none;
+  }
+
 
   &:hover {
     transform: scale(1.03);
@@ -79,6 +98,7 @@
     }
   }
 }
+
 .storyReel {
   display: flex;
   flex-direction: row;
@@ -93,4 +113,9 @@
     align-items: center;
     justify-content: center;
   }
+
+  @include for-small-screens {
+    font-size: smaller;
+  }
 }
+

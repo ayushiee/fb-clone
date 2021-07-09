@@ -15,6 +15,10 @@
     width: 90%;
   }
 
+  @include for-large-devices {
+    width: 85%;
+  }
+
   .top {
     display: flex;
     flex-direction: row;
@@ -59,7 +63,7 @@
   border-top: 1px solid $border-color;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
   .action {
     transition: linear 200ms;
@@ -68,7 +72,9 @@
     flex-direction: row;
     padding: 0.5rem 1rem ;
     flex: 1;
-    
+    align-items: center;
+    justify-content: center;
+     
     &:hover {
       background-color: $button-hover;
       transform: translateY(-2px);
@@ -78,7 +84,12 @@
     h4 {
       color: $comment-text;
       margin-left: 0.5rem;
+
+      @include for-small-screens {
+        display: none;
+      }
     }
+    
     .postAction {
       margin: 0 0.5rem;
       color: $icon;

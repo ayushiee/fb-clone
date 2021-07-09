@@ -13,6 +13,10 @@
   top: 0;
   box-shadow: 0px 5px 8px -9px $box-shadow;
 
+  @include for-small-screens {
+    padding: 0.4rem 0.5rem;
+  }
+
   .headerLeft {
     display: flex;
     flex-direction: row;
@@ -27,8 +31,14 @@
       flex: 0.2;
     }
 
+
     .logo {
       height: 40px;
+
+      @include for-small-screens {
+        height: 35px;
+      }
+
     }
 
     .searchInput {
@@ -48,6 +58,11 @@
       @include for-large-devices {
         flex: 0.4;
       }
+
+      @include for-small-screens {
+        display: none;
+      }
+
       .searchIcon {
         color: $comment-text;
         margin-left: 0.5rem;
@@ -86,6 +101,10 @@
       flex: 0.3;
     }
 
+    @include for-small-screens {
+      display: none;
+    }
+
     .option {
       display: flex;
       align-items: center;
@@ -115,6 +134,7 @@
         color: $icon;
       }
     }
+
     .activeOption {
       display: flex;
       align-items: center;
@@ -152,6 +172,10 @@
       transition: linear 200ms;
       @include for-xl-devices {
         padding: 0.6rem;
+      }
+
+      @include for-small-screens {
+        padding: 0.5rem;
       }
 
       &:hover {
