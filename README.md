@@ -7,7 +7,7 @@ Currently, I have implemented the feed update feature only, along with a widget.
 
 Deployed it using vercel [here](fb-clone-ayushiee.vercel.app).
 
-Please leave a ⭐ as motivation if you liked the idea 😄
+Please leave a ⭐ as motivation if you liked the implementation 😄
 
 
 ## Demo
