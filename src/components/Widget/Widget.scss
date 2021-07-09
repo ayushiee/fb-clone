@@ -1,9 +1,18 @@
 @import '../../utils/variables';
+@import '../../utils/mixins';
 
 .widget {
   display: flex;
   flex: 0.3;
   justify-content: flex-end;
+
+  @include for-large-devices {
+    display: none;
+  }
+
+  @include for-xl-devices {
+    flex: 0.7;
+  }
 
   .widgetIframe {
     overflow: hidden;

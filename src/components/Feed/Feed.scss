@@ -1,12 +1,20 @@
 @import '../../utils/variables';
+@import '../../utils/mixins';
 
 .feed {
-  flex: 0.4;
   display: flex;
   flex-direction: column;
+  flex: 0.45;
   justify-content: flex-start;
   align-items: center;
   padding: 0.35rem;
   height: 100vh;
-}
 
+  @include for-xl-devices {
+    flex: 0.3;
+  }
+
+  @include for-large-devices {
+    flex: 1;
+  }
+}

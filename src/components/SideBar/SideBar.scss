@@ -1,4 +1,5 @@
 @import '../../utils/variables';
+@import '../../utils/mixins';
 
 .sideBarRow {
     display: flex;
@@ -36,5 +37,12 @@
 
 .sideBar {
     padding: 0.2rem;
-    flex: 0.33;
+    flex: 0.3;
+
+    @include for-xl-devices {
+        flex: 0.2;
+        display: none;
+    }
+    
+    
 }

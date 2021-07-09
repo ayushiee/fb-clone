@@ -1,4 +1,5 @@
 @import '../../utils/variables';
+@import '../../utils/mixins';
 
 .story {
   padding: 0.5rem;
@@ -83,4 +84,13 @@
   flex-direction: row;
   margin: 0.6rem;
   align-items: center;
+
+  @include for-xl-devices {
+    width: 90%;
+  }
+
+  @include for-large-devices {
+    align-items: center;
+    justify-content: center;
+  }
 }
