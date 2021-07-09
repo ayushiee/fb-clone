@@ -3,7 +3,8 @@ $xs: 400px;
 $sm: 576px;
 $md: 768px;
 $lg: 992px;
-$xl: 1200px;
+$xl: 1025px;
+$xxl: 1200px;
 
 //Font-size
 $base-font-size: 16px;
@@ -11,11 +12,18 @@ $default-min-font-size: 8px;
 $default-max-font-size: 32px;
 
 
-@mixin for-extra-large-devices {
+@mixin for-xxl-devices {
+	@media (max-width: $xxl) {
+		@content;
+	}
+}
+
+@mixin for-xl-devices {
 	@media (max-width: $xl) {
 		@content;
 	}
 }
+
 
 @mixin for-large-devices {
 	@media (max-width: $lg) {
@@ -39,7 +47,7 @@ $default-max-font-size: 32px;
 	$min-font-size: $default-min-font-size,
 	$max-font-size: $default-max-font-size,
 	$lower-range: $xs,
-	$upper-range: $xl
+	$upper-range: $xxl
 ) {
 	font-size: calc(
 		#{$min-font-size} + #{(
