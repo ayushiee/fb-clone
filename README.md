@@ -5,7 +5,7 @@ I chose [vitejs](https://vitejs.dev/) as a build tool for this project (Thanks [
 
 Currently, I have implemented the feed update feature only, along with a widget. 
 
-Deployed it using vercel [here](fb-clone-ayushiee.vercel.app).
+Deployed it using vercel [here](https://fb-clone-ayushiee.vercel.app).
 
 Please leave a ⭐ as motivation if you liked the implementation 😄
 
