@@ -31,7 +31,7 @@ function CreatePost({ photoUrl, username }: CreatePostProps): React.ReactElement
       profilePic: photoUrl,
       username: username,
       timestamp: new Date(),
-      image: imgUrl,
+      image: imgUrl.trim(),
       text: input.trim()
     });
 
